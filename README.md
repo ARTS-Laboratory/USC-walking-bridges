@@ -9,11 +9,11 @@ Walking bridge behind the UofSC Engineering Building
 </p>
 
 
-## [FEA models](FEA_model)
+## [FEA Models](FEA_model)
 1. FEA models of the bridge
 
 
-## [CAD models](CAD_model)
+## [CAD Models](CAD_model)
 1. CAD models of the bridge
 
 ## [Modal Analysis](modal_analysis)
