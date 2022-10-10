@@ -1,4 +1,4 @@
 # Modal Analysis
 
-Ryan, put the modal analysis information here and update this README. Thanks!
+Modal analysis including measurements at the anti-nodes of the first three modes
 
