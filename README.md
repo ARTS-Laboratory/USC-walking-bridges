@@ -1,23 +1,21 @@
-# UofSC-Walking-Bridge
-A walking bridge behind 300 Main at the UofSC used for testing and validating structural health monitoring solutions 
+# UofSC-Walking-Bridges
+Two walking bridges behind 300 Main at the UofSC used for testing and validating structural health monitoring solutions 
 
 <p align="center">
-<img src="images/full_bridge1.jpg" alt="drawing" width="700"/> <br> 
-Walking bridge behind the UofSC Engineering Building
+<img src="Images/full_bridge1.jpg" alt="drawing" width="700"/> <br> 
+Walking bridge A behind the UofSC Engineering Building
 </p>
 <p align="center">
 </p>
 
 
-## [FEA Models](FEA_model)
-1. FEA models of the bridge
+## [Bridge A](Bridge_A)
+* Images and files associated with bridge A
 
 
-## [CAD Models](CAD_model)
-1. CAD models of the bridge
+## [Bridge B](Bridge_B)
+* Images and files associated with bridge B
 
-## [Modal Analysis](modal_analysis)
-1. Experimental modal analysis of the bridge
 
 
 
