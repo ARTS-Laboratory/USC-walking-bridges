@@ -15,7 +15,7 @@ Walking Bridge A and B behind 300 Main Street in Columbia SC which houses UofSC 
 Pedestrian bridge A with sensor network deployment.
 
 ![Bridge A](https://github.com/ARTS-Laboratory/UofSC-walking-bridges/assets/53347740/77e4f6c7-543a-4def-ba73-51d64da76b58)
-frequency domain analysis of the pedestrian bridge response.
+Frequency domain analysis of the pedestrian bridge response averaged across multiple accelerometers.
 
 ## [Bridge B](Bridge_B)
 
