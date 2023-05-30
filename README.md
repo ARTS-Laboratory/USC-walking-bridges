@@ -10,18 +10,21 @@ Walking Bridge A and B behind 300 Main Street in Columbia SC which houses UofSC 
 
 
 ## [Bridge A](Bridge_A)
-* Images and files associated with bridge A
+
+![bridge A](https://github.com/ARTS-Laboratory/UofSC-walking-bridges/assets/53347740/d6ecd5f9-49c8-4d6c-afb2-7e578ebb36db)
+Pedestrian bridge A with sensor network deployment.
+
 
 
 ## [Bridge B](Bridge_B)
-* Images and files associated with bridge B
+
 ![BridgeUAV](https://github.com/ARTS-Laboratory/UofSC-walking-bridges/assets/53347740/2205b6aa-bdca-4054-8346-3bdd6f3562cb)
-Pedestrian bridge experimental setup with a sensor network deployment along with a structural mass shaker.
+Pedestrian bridge B experimental setup with a sensor network deployment along with a structural mass shaker.
 
 
 
 ![Bridge B](https://github.com/ARTS-Laboratory/UofSC-walking-bridges/assets/53347740/5036d32f-0f58-4ef0-be74-4f4a74d8ce1e)
-Test data of the three sensing nodes on a pedestrian bridge with time and frequency domain.
+Contineous excitation test data of the three sensing nodes on a pedestrian bridge with time and frequency domain measurements.
 
 
 
