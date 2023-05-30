@@ -8,6 +8,7 @@ Walking Bridge A behind the UofSC engineering building.
 <p align="center">
 </p>
 
+<p align="center">
 <img src="media/Bridge A.jpg" alt="drawing" width="700"/> <br> 
 Frequency response of the bridge averaged across multiple accelerometers
 </p>
