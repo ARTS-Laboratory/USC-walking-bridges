@@ -2,7 +2,7 @@
 
 
 
-
+This test utilizes a hammer to induce and impulse response in the bridge to be captured by the sensor network.
 
 
 
