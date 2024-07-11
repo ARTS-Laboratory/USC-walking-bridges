@@ -1,0 +1,261 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2020 replay file
+# Internal Version: 2019_09_13-13.49.31 163176
+# Run by SJR4 on Wed Jul 10 22:17:57 2024
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=233.549987792969, 
+    height=102.149993896484)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('BridgeA2-NoRail.cae')
+#: The model database "C:\Users\SJR4\Desktop\ABAQUS\BridgeA2-NoRail\BridgeA2-NoRail.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+a = mdb.models['Model-1'].rootAssembly
+a.suppressFeatures(('Part-2-1', 'Part-1-1', ))
+mdb.Job(name='Job-7', model='Model-1', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=652.384, 
+    farPlane=1337.43, width=570.3, height=242.103, cameraPosition=(456.061, 
+    201.615, -760.151), cameraUpVector=(-0.942094, 0.315887, -0.112583), 
+    cameraTarget=(-87.9453, -73.7178, 40.321))
+del mdb.models['Model-1'].boundaryConditions['BC-2']
+session.viewports['Viewport: 1'].view.setValues(nearPlane=706.478, 
+    farPlane=1283.33, width=399.796, height=169.721, viewOffsetX=11.8762, 
+    viewOffsetY=37.3902)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['CAD Model of Bridge Assembly-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#200 ]', ), )
+f2 = a.instances['CAD Model of Bridge Assembly-2-1'].faces
+faces2 = f2.getSequenceFromMask(mask=('[#2000 ]', ), )
+f3 = a.instances['CAD Model of Bridge Assembly-15-1'].faces
+faces3 = f3.getSequenceFromMask(mask=('[#1000 ]', ), )
+region = a.Set(faces=faces1+faces2+faces3, name='Set-4')
+mdb.models['Model-1'].EncastreBC(name='BC-4', createStepName='Initial', 
+    region=region, localCsys=None)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+del mdb.models['Model-1'].boundaryConditions['BC-1']
+session.viewports['Viewport: 1'].view.setValues(nearPlane=705.924, 
+    farPlane=1229.14, width=399.483, height=169.588, cameraPosition=(14.7844, 
+    600.746, 732.573), cameraUpVector=(0.391959, 0.298457, -0.870225), 
+    cameraTarget=(-170.013, -91.8208, 26.3807), viewOffsetX=11.8669, 
+    viewOffsetY=37.3609)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=684.419, 
+    farPlane=1264.22, width=387.313, height=164.422, cameraPosition=(-478.02, 
+    52.3135, 919.71), cameraUpVector=(0.697428, 0.684612, -0.211896), 
+    cameraTarget=(-155.579, -78.4633, -24.449), viewOffsetX=11.5054, 
+    viewOffsetY=36.2227)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=747.573, 
+    farPlane=1201.07, width=26.7003, height=11.3348, viewOffsetX=52.7441, 
+    viewOffsetY=51.2992)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['CAD Model of Bridge Assembly-15-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#2000 ]', ), )
+f2 = a.instances['CAD Model of Bridge Assembly-1-1'].faces
+faces2 = f2.getSequenceFromMask(mask=('[#80 ]', ), )
+f3 = a.instances['CAD Model of Bridge Assembly-2-1'].faces
+faces3 = f3.getSequenceFromMask(mask=('[#1000 ]', ), )
+region = a.Set(faces=faces1+faces2+faces3, name='Set-5')
+mdb.models['Model-1'].EncastreBC(name='BC-5', createStepName='Initial', 
+    region=region, localCsys=None)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=710.242, 
+    farPlane=1238.4, width=290.393, height=123.277, viewOffsetX=76.0221, 
+    viewOffsetY=50.4828)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.models['Model-1'].constraints['Constraint-1'].suppress()
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=ON, 
+    constraints=ON, connectors=ON, engineeringFeatures=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=OFF, 
+    constraints=OFF, connectors=OFF, engineeringFeatures=OFF)
+mdb.jobs['Job-7'].submit(consistencyChecking=OFF)
+#: The job input file "Job-7.inp" has been submitted for analysis.
+#: Job Job-7: Analysis Input File Processor completed successfully.
+#: Job Job-7: Abaqus/Standard completed successfully.
+#: Job Job-7 completed successfully. 
+o3 = session.openOdb(
+    name='C:/Users/SJR4/Desktop/ABAQUS/BridgeA2-NoRail/Job-7.odb')
+#: Model: C:/Users/SJR4/Desktop/ABAQUS/BridgeA2-NoRail/Job-7.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     15
+#: Number of Meshes:             15
+#: Number of Element Sets:       23
+#: Number of Node Sets:          24
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=699.116, 
+    farPlane=1235.2, width=437.211, height=173.201, viewOffsetX=10.5738, 
+    viewOffsetY=24.461)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6)
+mdb.save()
+#: The model database has been saved to "C:\Users\SJR4\Desktop\ABAQUS\BridgeA2-NoRail\BridgeA2-NoRail.cae".
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=690.566, 
+    farPlane=1240.58, width=282.348, height=119.862, cameraPosition=(-735.459, 
+    -161.615, 745.09), cameraUpVector=(0.661156, 0.730389, 0.171476), 
+    cameraTarget=(-128.682, -64.5827, -51.7245), viewOffsetX=73.916, 
+    viewOffsetY=49.0843)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=713.617, 
+    farPlane=1217.53, width=179.185, height=76.0674, viewOffsetX=75.2663, 
+    viewOffsetY=53.7739)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=862.186, 
+    farPlane=1129.04, width=216.49, height=91.904, cameraPosition=(-90.0956, 
+    -1048.25, 171.71), cameraUpVector=(-0.0641172, 0.510489, 0.85749), 
+    cameraTarget=(-154.24, -64.0857, -27.8325), viewOffsetX=90.9362, 
+    viewOffsetY=64.9691)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=768.761, 
+    farPlane=1222.47, width=833.409, height=353.798, viewOffsetX=151.479, 
+    viewOffsetY=-0.139412)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=592.596, 
+    farPlane=1155.27, width=642.43, height=272.723, cameraPosition=(-840.628, 
+    394.552, -228.449), cameraUpVector=(0.629742, 0.671661, 0.390252), 
+    cameraTarget=(87.3257, 6.57536, -198.648), viewOffsetX=116.767, 
+    viewOffsetY=-0.107465)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=719.463, 
+    farPlane=1028.4, width=88.644, height=37.6311, viewOffsetX=232.466, 
+    viewOffsetY=-36.1248)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=ON, 
+    constraints=ON, connectors=ON, engineeringFeatures=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=722.562, 
+    farPlane=1025.3, width=89.0259, height=37.7932, viewOffsetX=233.467, 
+    viewOffsetY=-36.2805)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=787.729, 
+    farPlane=1009.03, width=97.0551, height=41.2017, cameraPosition=(-479.082, 
+    -916.766, 109.97), cameraUpVector=(-0.220947, 0.473043, 0.852885), 
+    cameraTarget=(-367.913, 75.0795, -18.079), viewOffsetX=254.523, 
+    viewOffsetY=-39.5526)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=717.679, 
+    farPlane=1081.53, width=88.4243, height=37.5378, cameraPosition=(-766.117, 
+    -669.376, 287.456), cameraUpVector=(0.0482804, 0.671571, 0.739365), 
+    cameraTarget=(-300.556, 159.534, -42.2017), viewOffsetX=231.889, 
+    viewOffsetY=-36.0353)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=695.689, 
+    farPlane=1103.52, width=193.18, height=82.0086, viewOffsetX=259.027, 
+    viewOffsetY=-35.53)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=635.765, 
+    farPlane=1133.8, width=176.54, height=74.9446, cameraPosition=(-903.964, 
+    -100.482, 488.081), cameraUpVector=(0.554546, 0.641633, 0.529893), 
+    cameraTarget=(-148.205, 240.129, -82.2936), viewOffsetX=236.715, 
+    viewOffsetY=-32.4696)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=602.125, 
+    farPlane=1167.44, width=452.755, height=192.203, viewOffsetX=179.216, 
+    viewOffsetY=-19.9984)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=675.9, 
+    farPlane=1163.2, width=508.229, height=215.753, cameraPosition=(-713.577, 
+    671.026, 22.7576), cameraUpVector=(0.8515, 0.386859, 0.353959), 
+    cameraTarget=(51, 54.0168, -194.581), viewOffsetX=201.175, 
+    viewOffsetY=-22.4487)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=658.533, 
+    farPlane=1134.06, width=495.17, height=210.209, cameraPosition=(-977.565, 
+    -90.7082, -270.458), cameraUpVector=(0.0724681, 0.836337, 0.543405), 
+    cameraTarget=(-7.72578, 151.554, -155.41), viewOffsetX=196.006, 
+    viewOffsetY=-21.8719)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=659.815, 
+    farPlane=1143.06, width=496.134, height=210.618, cameraPosition=(-918.087, 
+    124.326, -374.083), cameraUpVector=(0.45451, 0.883667, 0.112041), 
+    cameraTarget=(62.5643, -22.224, -202.729), viewOffsetX=196.388, 
+    viewOffsetY=-21.9145)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=652.602, 
+    farPlane=1155.42, width=490.71, height=208.316, cameraPosition=(-840.836, 
+    328.362, -386.897), cameraUpVector=(0.61118, 0.758043, 0.227664), 
+    cameraTarget=(79.2131, -29.4867, -192.04), viewOffsetX=194.241, 
+    viewOffsetY=-21.6749)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=OFF, 
+    constraints=OFF, connectors=OFF, engineeringFeatures=OFF)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/SJR4/Desktop/ABAQUS/BridgeA2-NoRail/Job-7.odb'])
+o3 = session.openOdb(
+    name='C:/Users/SJR4/Desktop/ABAQUS/BridgeA2-NoRail/Job-7.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+mdb.save()
+#: The model database has been saved to "C:\Users\SJR4\Desktop\ABAQUS\BridgeA2-NoRail\BridgeA2-NoRail.cae".

@@ -1,0 +1,1663 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2020 replay file
+# Internal Version: 2019_09_13-13.49.31 163176
+# Run by SJR4 on Tue Jul  9 23:00:24 2024
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=216.224990844727, 
+    height=102.149993896484)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('BridgeA2.cae')
+#: The model database "C:\Users\SJR4\Desktop\ABAQUS\BridgeA2\BridgeA2.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p1 = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-2']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-2']
+p.seedPart(size=19.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-2']
+p.generateMesh()
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-2']
+p.generateMesh()
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-3']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-3']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-3']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-3']
+p.seedPart(size=6.3, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-3']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-4']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-4']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-4']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-4']
+p.seedPart(size=6.3, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-4']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-5']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-5']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-5']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-5']
+p.seedPart(size=3.9, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-5']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-6']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-6']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-6']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-6']
+p.seedPart(size=3.3, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-6']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-7']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-7']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-7']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-7']
+p.seedPart(size=3.3, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-7']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-8']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-8']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-8']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-8']
+p.seedPart(size=3.3, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-8']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-9']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-9']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-9']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-9']
+p.seedPart(size=3.3, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-9']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-10']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-10']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-10']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-10']
+p.seedPart(size=3.3, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-10']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-11']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-11']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-11']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-11']
+p.seedPart(size=3.3, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-11']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-12']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-12']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-12']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-12']
+p.seedPart(size=3.3, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-12']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-13']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-13']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-13']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-13']
+p.seedPart(size=3.3, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-13']
+p.generateMesh()
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-14']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-14']
+p.seedPart(size=3.3, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-14']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-14']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-14']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-15']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-15']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-15']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-15']
+p.seedPart(size=19.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-15']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p1 = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['Part-1']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['Part-1']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['Part-1']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#1 ]', ), )
+p.setMeshControls(regions=pickedRegions, elemShape=HEX_DOMINATED, 
+    technique=SYSTEM_ASSIGN)
+p = mdb.models['Model-1'].parts['Part-1']
+p.seedPart(size=3.9, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['Part-1']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#1 ]', ), )
+p.setMeshControls(regions=pickedRegions, elemShape=TET, technique=FREE)
+elemType1 = mesh.ElemType(elemCode=C3D20R)
+elemType2 = mesh.ElemType(elemCode=C3D15)
+elemType3 = mesh.ElemType(elemCode=C3D10)
+p = mdb.models['Model-1'].parts['Part-1']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+pickedRegions =(cells, )
+p.setElementType(regions=pickedRegions, elemTypes=(elemType1, elemType2, 
+    elemType3))
+p = mdb.models['Model-1'].parts['Part-1']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=662.924, 
+    farPlane=1054.48, width=125.33, height=57.9616, viewOffsetX=-93.5443, 
+    viewOffsetY=-11.1016)
+p = mdb.models['Model-1'].parts['Part-1']
+p.deleteMesh()
+p = mdb.models['Model-1'].parts['Part-1']
+p.seedPart(size=7.8, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['Part-1']
+p.generateMesh()
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p1 = mdb.models['Model-1'].parts['Part-2']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['Part-2']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(cells=cells, name='Set-1')
+p = mdb.models['Model-1'].parts['Part-2']
+p.SectionAssignment(region=region, sectionName='Steel', offset=0.0, 
+    offsetType=MIDDLE_SURFACE, offsetField='', 
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['Part-2']
+p.seedPart(size=7.8, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['Part-2']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#1 ]', ), )
+p.setMeshControls(regions=pickedRegions, elemShape=TET, technique=FREE)
+elemType1 = mesh.ElemType(elemCode=C3D20R)
+elemType2 = mesh.ElemType(elemCode=C3D15)
+elemType3 = mesh.ElemType(elemCode=C3D10)
+p = mdb.models['Model-1'].parts['Part-2']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+pickedRegions =(cells, )
+p.setElementType(regions=pickedRegions, elemTypes=(elemType1, elemType2, 
+    elemType3))
+p = mdb.models['Model-1'].parts['Part-2']
+p.generateMesh()
+a = mdb.models['Model-1'].rootAssembly
+a.regenerate()
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+#: Warning: Cannot continue yet--complete the step or cancel the procedure.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=770.214, 
+    farPlane=1242.25, width=97.65, height=44.9619, viewOffsetX=-135.823, 
+    viewOffsetY=-6.64996)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=917.853, 
+    farPlane=1390.06, width=116.368, height=53.5805, cameraPosition=(-223.056, 
+    297.825, 1117.89), cameraUpVector=(-0.28135, 0.718886, -0.635646), 
+    cameraTarget=(-50.224, -3.09933, 173.394), viewOffsetX=-161.858, 
+    viewOffsetY=-7.92466)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=894.925, 
+    farPlane=1412.98, width=258.55, height=119.047, viewOffsetX=-61.6042, 
+    viewOffsetY=25.8583)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['CAD Model of Bridge Assembly-15-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#2000 ]', ), )
+e1 = a.instances['CAD Model of Bridge Assembly-15-1'].edges
+edges1 = e1.getSequenceFromMask(mask=('[#100 ]', ), )
+f2 = a.instances['CAD Model of Bridge Assembly-1-1'].faces
+faces2 = f2.getSequenceFromMask(mask=('[#80 ]', ), )
+e2 = a.instances['CAD Model of Bridge Assembly-1-1'].edges
+edges2 = e2.getSequenceFromMask(mask=('[#10000 ]', ), )
+f3 = a.instances['CAD Model of Bridge Assembly-2-1'].faces
+faces3 = f3.getSequenceFromMask(mask=('[#1000 ]', ), )
+region = a.Set(edges=edges1+edges2, faces=faces1+faces2+faces3, name='Set-1')
+mdb.models['Model-1'].EncastreBC(name='BC-1', createStepName='Initial', 
+    region=region, localCsys=None)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=932.347, 
+    farPlane=1343.05, width=269.362, height=124.025, cameraPosition=(1016.29, 
+    60.9726, -222.754), cameraUpVector=(-0.533051, 0.731846, -0.424568), 
+    cameraTarget=(36.7889, -96.6817, -54.7369), viewOffsetX=-64.1801, 
+    viewOffsetY=26.9395)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=868.951, 
+    farPlane=1418.98, width=251.047, height=115.592, cameraPosition=(445.16, 
+    -112.726, -986.859), cameraUpVector=(-0.60376, 0.79647, 0.0333103), 
+    cameraTarget=(-68.5034, -117.171, -121.621), viewOffsetX=-59.8161, 
+    viewOffsetY=25.1077)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=904.984, 
+    farPlane=1382.95, width=71.8628, height=33.0885, viewOffsetX=-64.1131, 
+    viewOffsetY=72.9344)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['CAD Model of Bridge Assembly-1-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#200 ]', ), )
+f2 = a.instances['CAD Model of Bridge Assembly-2-1'].faces
+faces2 = f2.getSequenceFromMask(mask=('[#2000 ]', ), )
+e2 = a.instances['CAD Model of Bridge Assembly-2-1'].edges
+edges2 = e2.getSequenceFromMask(mask=('[#4000000 ]', ), )
+f3 = a.instances['Part-2-1'].faces
+faces3 = f3.getSequenceFromMask(mask=('[#0 #420000 ]', ), )
+f4 = a.instances['CAD Model of Bridge Assembly-15-1'].faces
+faces4 = f4.getSequenceFromMask(mask=('[#1000 ]', ), )
+f5 = a.instances['Part-1-1'].faces
+faces5 = f5.getSequenceFromMask(mask=('[#0 #420000 ]', ), )
+region = a.Set(edges=edges2, faces=faces1+faces2+faces3+faces4+faces5, 
+    name='Set-2')
+mdb.models['Model-1'].EncastreBC(name='BC-2', createStepName='Initial', 
+    region=region, localCsys=None)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=843.643, 
+    farPlane=1444.29, width=470.971, height=216.854, viewOffsetX=77.7291, 
+    viewOffsetY=75.6367)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=832.704, 
+    farPlane=1455.23, width=464.864, height=214.042, cameraPosition=(420.354, 
+    -173.949, -1001.9), cameraUpVector=(-0.250669, 0.93691, 0.24365), 
+    cameraTarget=(-93.3098, -178.394, -136.662), viewOffsetX=76.7212, 
+    viewOffsetY=74.656)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=944.486, 
+    farPlane=1361.96, width=527.267, height=242.775, cameraPosition=(-34.961, 
+    -1215.36, -150.895), cameraUpVector=(0.713628, 0.592305, -0.374045), 
+    cameraTarget=(-264.724, -253.831, 36.6378), viewOffsetX=87.0202, 
+    viewOffsetY=84.6778)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1006.86, 
+    farPlane=1299.57, width=110.661, height=50.9525, viewOffsetX=-63.9924, 
+    viewOffsetY=163.44)
+a = mdb.models['Model-1'].rootAssembly
+f1 = a.instances['CAD Model of Bridge Assembly-4-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#4 ]', ), )
+f2 = a.instances['CAD Model of Bridge Assembly-3-1'].faces
+faces2 = f2.getSequenceFromMask(mask=('[#4 ]', ), )
+region = a.Set(faces=faces1+faces2, name='Set-3')
+mdb.models['Model-1'].EncastreBC(name='BC-3', createStepName='Initial', 
+    region=region, localCsys=None)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF, adaptiveMeshConstraints=ON)
+mdb.models['Model-1'].FrequencyStep(name='Freq', previous='Initial', 
+    numEigen=10)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Freq')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=924.943, 
+    farPlane=1408.38, width=101.658, height=46.8072, cameraPosition=(-528.426, 
+    354.098, 1049.62), cameraUpVector=(0.752621, 0.48812, -0.441927), 
+    cameraTarget=(-230.352, -155.87, 235.011), viewOffsetX=-58.7862, 
+    viewOffsetY=150.144)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=884.91, 
+    farPlane=1448.42, width=380.236, height=175.076, viewOffsetX=-69.3024, 
+    viewOffsetY=139.447)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=968.673, 
+    farPlane=1400.68, width=416.229, height=191.648, cameraPosition=(-1220.71, 
+    331.418, 181.977), cameraUpVector=(0.742242, 0.66926, -0.0341715), 
+    cameraTarget=(-338.419, -148.888, 123.967), viewOffsetX=-75.8624, 
+    viewOffsetY=152.647)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+mdb.save()
+#: The model database has been saved to "C:\Users\SJR4\Desktop\ABAQUS\BridgeA2\BridgeA2.cae".
+mdb.Job(name='Job-1', model='Model-1', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+#: The job input file "Job-1.inp" has been submitted for analysis.
+#: Job Job-1: Analysis Input File Processor completed successfully.
+#: Job Job-1: Abaqus/Standard completed successfully.
+#: Job Job-1 completed successfully. 
+o3 = session.openOdb(name='C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-1.odb')
+#: Model: C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     17
+#: Number of Meshes:             17
+#: Number of Element Sets:       23
+#: Number of Node Sets:          21
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=739.364, 
+    farPlane=1273.1, width=333.345, height=143.229, viewOffsetX=-34.8845, 
+    viewOffsetY=14.2557)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=991.148, 
+    farPlane=1378.19, width=222.315, height=102.363, viewOffsetX=-134.83, 
+    viewOffsetY=178.259)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=ON, 
+    constraints=ON, connectors=ON, engineeringFeatures=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1025.73, 
+    farPlane=1343.61, width=62.6926, height=28.8661, viewOffsetX=-156.456, 
+    viewOffsetY=193.4)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(renderStyle=HIDDEN)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    renderStyle=WIREFRAME)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    renderStyle=WIREFRAME)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(renderStyle=SHADED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1003.63, 
+    farPlane=1365.71, width=225.116, height=103.652, viewOffsetX=-106.833, 
+    viewOffsetY=212.36)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(renderStyle=SHADED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=998.056, 
+    farPlane=1371.29, width=190.285, height=87.6147, viewOffsetX=-111.184, 
+    viewOffsetY=206.733)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(renderStyle=HIDDEN)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(renderStyle=SHADED)
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'CAD Model of Bridge Assembly-1-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=987.616, 
+    farPlane=1305.84, width=188.295, height=86.6983, cameraPosition=(-412.371, 
+    -1179.65, 92.2664), cameraUpVector=(-0.555547, 0.649878, -0.518677), 
+    cameraTarget=(-39.2907, -252.327, 207.906), viewOffsetX=-110.021, 
+    viewOffsetY=204.571)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=985.769, 
+    farPlane=1307.68, width=235.551, height=108.457, viewOffsetX=60.9109, 
+    viewOffsetY=159.926)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=903.161, 
+    farPlane=1285.61, width=215.812, height=99.3684, cameraPosition=(943.203, 
+    -142.5, 520.145), cameraUpVector=(-0.18713, 0.424566, -0.885848), 
+    cameraTarget=(-51.4592, -70.7414, 386.03), viewOffsetX=55.8065, 
+    viewOffsetY=146.524)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=908.141, 
+    farPlane=1415.23, width=217.002, height=99.9163, cameraPosition=(506.684, 
+    -635.309, 899.48), cameraUpVector=(0.460333, 0.60614, -0.648605), 
+    cameraTarget=(-181.074, -127.732, 368.59), viewOffsetX=56.1142, 
+    viewOffsetY=147.332)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=907.92, 
+    farPlane=1415.45, width=216.949, height=99.892, cameraPosition=(509.95, 
+    -747.463, 788.02), cameraUpVector=(0.254049, 0.966489, -0.0368424), 
+    cameraTarget=(-177.808, -239.886, 257.13), viewOffsetX=56.1005, 
+    viewOffsetY=147.296)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=956.111, 
+    farPlane=1277.42, width=228.464, height=105.194, cameraPosition=(38.5364, 
+    -1168.25, 291.924), cameraUpVector=(0.724891, 0.640709, 0.25303), 
+    cameraTarget=(-290.156, -224.988, 170.645), viewOffsetX=59.0782, 
+    viewOffsetY=155.114)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=927.872, 
+    farPlane=1305.66, width=429.258, height=197.647, viewOffsetX=178.286, 
+    viewOffsetY=134.9)
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-1-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#40 ]', ), )
+region1=a.Surface(side1Faces=side1Faces1, name='m_Surf-1')
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['Part-2-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=(
+    '[#0 #8000000 #0 #200000 #0 #8000 #0', ' #200 #0 #8 ]', ), )
+s2 = a.instances['Part-1-1'].faces
+side1Faces2 = s2.getSequenceFromMask(mask=(
+    '[#0 #8000000 #0 #200000 #0 #8000 #0', ' #200 #0 #8 ]', ), )
+region2=a.Surface(side1Faces=side1Faces1+side1Faces2, name='s_Surf-1')
+mdb.models['Model-1'].Tie(name='Constraint-1', master=region1, slave=region2, 
+    positionToleranceMethod=COMPUTED, adjust=ON, tieRotations=ON, thickness=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'CAD Model of Bridge Assembly-1-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=803.185, 
+    farPlane=1394.9, width=371.574, height=171.087, cameraPosition=(-582.037, 
+    351.79, 966.424), cameraUpVector=(0.356607, 0.661672, -0.659562), 
+    cameraTarget=(-382.717, -114.865, 97.5189), viewOffsetX=154.328, 
+    viewOffsetY=116.772)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=822.599, 
+    farPlane=1375.49, width=274.951, height=126.599, viewOffsetX=167.458, 
+    viewOffsetY=117.332)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=869.688, 
+    farPlane=1363.18, width=290.691, height=133.846, cameraPosition=(-956.815, 
+    -692.728, 434.32), cameraUpVector=(-0.178577, 0.514165, -0.838895), 
+    cameraTarget=(-88.095, -350.138, 59.554), viewOffsetX=177.044, 
+    viewOffsetY=124.048)
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'CAD Model of Bridge Assembly-1-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=955.963, 
+    farPlane=1277.93, width=319.529, height=147.124, cameraPosition=(-305.921, 
+    1059.83, 212.752), cameraUpVector=(0.633989, -0.219763, -0.741459), 
+    cameraTarget=(-362.025, 77.1667, 3.67859), viewOffsetX=194.607, 
+    viewOffsetY=136.354)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=950.266, 
+    farPlane=1283.62, width=373.677, height=172.056, viewOffsetX=135.769, 
+    viewOffsetY=219.339)
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-1-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#100 ]', ), )
+region1=a.Surface(side1Faces=side1Faces1, name='m_Surf-3')
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-14-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#1 ]', ), )
+s2 = a.instances['CAD Model of Bridge Assembly-7-1'].faces
+side1Faces2 = s2.getSequenceFromMask(mask=('[#80 ]', ), )
+s3 = a.instances['CAD Model of Bridge Assembly-13-1'].faces
+side1Faces3 = s3.getSequenceFromMask(mask=('[#80 ]', ), )
+s4 = a.instances['CAD Model of Bridge Assembly-8-1'].faces
+side1Faces4 = s4.getSequenceFromMask(mask=('[#1 ]', ), )
+s5 = a.instances['CAD Model of Bridge Assembly-11-1'].faces
+side1Faces5 = s5.getSequenceFromMask(mask=('[#80 ]', ), )
+s6 = a.instances['CAD Model of Bridge Assembly-9-1'].faces
+side1Faces6 = s6.getSequenceFromMask(mask=('[#80 ]', ), )
+s7 = a.instances['CAD Model of Bridge Assembly-12-1'].faces
+side1Faces7 = s7.getSequenceFromMask(mask=('[#1 ]', ), )
+s8 = a.instances['CAD Model of Bridge Assembly-10-1'].faces
+side1Faces8 = s8.getSequenceFromMask(mask=('[#8 ]', ), )
+s9 = a.instances['CAD Model of Bridge Assembly-6-1'].faces
+side1Faces9 = s9.getSequenceFromMask(mask=('[#80 ]', ), )
+region2=a.Surface(side1Faces=side1Faces1+side1Faces2+side1Faces3+side1Faces4+\
+    side1Faces5+side1Faces6+side1Faces7+side1Faces8+side1Faces9, 
+    name='s_Surf-3')
+mdb.models['Model-1'].Tie(name='Constraint-2', master=region1, slave=region2, 
+    positionToleranceMethod=COMPUTED, adjust=ON, tieRotations=ON, thickness=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=883.633, 
+    farPlane=1350.26, width=783.12, height=360.579, viewOffsetX=267.694, 
+    viewOffsetY=219.039)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=867.387, 
+    farPlane=1366.5, width=768.721, height=353.95, viewOffsetX=278.822, 
+    viewOffsetY=117.021)
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'CAD Model of Bridge Assembly-1-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=745.796, 
+    farPlane=1327.09, width=660.962, height=304.333, cameraPosition=(-1076.59, 
+    328.58, -178.053), cameraUpVector=(0.723622, 0.686806, 0.0683276), 
+    cameraTarget=(-179.369, -121.27, -249.569), viewOffsetX=239.736, 
+    viewOffsetY=100.617)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=875.702, 
+    farPlane=1197.18, width=82.3223, height=37.9044, viewOffsetX=242.257, 
+    viewOffsetY=100.594)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=840.097, 
+    farPlane=1262.33, width=78.9752, height=36.3633, cameraPosition=(-867.915, 
+    -777.144, 290.915), cameraUpVector=(-0.00353166, 0.83505, 0.550163), 
+    cameraTarget=(-319.901, -69.8702, -169.442), viewOffsetX=232.407, 
+    viewOffsetY=96.5039)
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-5-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#8 ]', ), )
+region1=a.Surface(side1Faces=side1Faces1, name='m_Surf-5')
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-15-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#20 ]', ), )
+s2 = a.instances['CAD Model of Bridge Assembly-2-1'].faces
+side1Faces2 = s2.getSequenceFromMask(mask=('[#20 ]', ), )
+region2=a.Surface(side1Faces=side1Faces1+side1Faces2, name='s_Surf-5')
+mdb.models['Model-1'].Tie(name='Constraint-3', master=region1, slave=region2, 
+    positionToleranceMethod=COMPUTED, adjust=ON, tieRotations=ON, thickness=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=838.469, 
+    farPlane=1262.83, width=78.8221, height=36.2928, cameraPosition=(-1147.65, 
+    89.1357, 260.773), cameraUpVector=(0.602343, 0.721841, 0.340775), 
+    cameraTarget=(-259.191, 33.8801, -208.354), viewOffsetX=231.957, 
+    viewOffsetY=96.3168)
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'CAD Model of Bridge Assembly-5-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=844.016, 
+    farPlane=1257.3, width=49.2452, height=22.6744, viewOffsetX=235.377, 
+    viewOffsetY=93.3653)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=864.057, 
+    farPlane=1233.71, width=50.4145, height=23.2129, cameraPosition=(-790.28, 
+    780.489, 48.2756), cameraUpVector=(0.931308, 0.234347, 0.27883), 
+    cameraTarget=(-159.022, 54.8135, -247.36), viewOffsetX=240.966, 
+    viewOffsetY=95.5823)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=852.072, 
+    farPlane=1245.7, width=133.221, height=61.3402, viewOffsetX=250.471, 
+    viewOffsetY=95.5871)
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'CAD Model of Bridge Assembly-1-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=891.648, 
+    farPlane=1208.46, width=139.409, height=64.1893, cameraPosition=(-292.01, 
+    1016.59, 51.703), cameraUpVector=(0.958339, -0.242649, 0.150691), 
+    cameraTarget=(-135.184, 68.4742, -246.576), viewOffsetX=262.104, 
+    viewOffsetY=100.027)
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-5-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#200 ]', ), )
+region1=a.Surface(side1Faces=side1Faces1, name='m_Surf-7')
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-3-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#2 ]', ), )
+s2 = a.instances['CAD Model of Bridge Assembly-4-1'].faces
+side1Faces2 = s2.getSequenceFromMask(mask=('[#2 ]', ), )
+region2=a.Surface(side1Faces=side1Faces1+side1Faces2, name='s_Surf-7')
+mdb.models['Model-1'].Tie(name='Constraint-4', master=region1, slave=region2, 
+    positionToleranceMethod=COMPUTED, adjust=ON, tieRotations=ON, thickness=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'CAD Model of Bridge Assembly-5-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=839.186, 
+    farPlane=1260.92, width=481.508, height=221.705, viewOffsetX=322.517, 
+    viewOffsetY=30.4329)
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'CAD Model of Bridge Assembly-1-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=823.302, 
+    farPlane=1418.94, width=472.394, height=217.509, cameraPosition=(-716.611, 
+    425.672, 960.183), cameraUpVector=(0.21329, 0.647899, -0.731255), 
+    cameraTarget=(-589.322, -73.8726, 96.0414), viewOffsetX=316.413, 
+    viewOffsetY=29.8569)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=881.57, 
+    farPlane=1360.68, width=137.833, height=63.4639, viewOffsetX=352.96, 
+    viewOffsetY=43.0907)
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'CAD Model of Bridge Assembly-15-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=900.191, 
+    farPlane=1342.39, width=53.6465, height=24.701, viewOffsetX=360.894, 
+    viewOffsetY=51.61)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=900.492, 
+    farPlane=1366.38, width=53.6644, height=24.7092, cameraPosition=(-1155.71, 
+    346.84, 485.094), cameraUpVector=(0.507634, 0.679189, -0.530104), 
+    cameraTarget=(-540.705, -121.654, -158.931), viewOffsetX=361.015, 
+    viewOffsetY=51.6273)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=895.365, 
+    farPlane=1371.5, width=95.403, height=43.9273, viewOffsetX=447.897, 
+    viewOffsetY=68.9104)
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'CAD Model of Bridge Assembly-15-1', ))
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'CAD Model of Bridge Assembly-1-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1015.64, 
+    farPlane=1476.31, width=108.218, height=49.8279, cameraPosition=(573.149, 
+    -97.2058, 1241.61), cameraUpVector=(-0.0138311, 0.912517, -0.408805), 
+    cameraTarget=(-241.725, -3.07449, 658.851), viewOffsetX=508.061, 
+    viewOffsetY=78.1668)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1028.87, 
+    farPlane=1463.09, width=20.2879, height=9.34135, viewOffsetX=338.43, 
+    viewOffsetY=69.0872)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1219.6, 
+    farPlane=1583.54, width=24.0489, height=11.0731, cameraPosition=(-1513.55, 
+    -10.9958, 213.552), cameraUpVector=(0.400467, 0.912655, 0.0817708), 
+    cameraTarget=(-568.208, -27.4576, -130.748), viewOffsetX=401.168, 
+    viewOffsetY=81.8947)
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'CAD Model of Bridge Assembly-15-1', ))
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'CAD Model of Bridge Assembly-1-1', ))
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-15-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#7 ]', ), )
+region1=a.Surface(side1Faces=side1Faces1, name='m_Surf-9')
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-1-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#38 ]', ), )
+region2=a.Surface(side1Faces=side1Faces1, name='s_Surf-9')
+mdb.models['Model-1'].Tie(name='Constraint-5', master=region1, slave=region2, 
+    positionToleranceMethod=COMPUTED, adjust=ON, tieRotations=ON, thickness=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1203.39, 
+    farPlane=1602.25, width=141.801, height=65.2906, viewOffsetX=428.923, 
+    viewOffsetY=97.4791)
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'CAD Model of Bridge Assembly-15-1', ))
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'CAD Model of Bridge Assembly-2-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1336.87, 
+    farPlane=1847.02, width=157.528, height=72.5323, cameraPosition=(179.564, 
+    417.371, 1622.79), cameraUpVector=(-0.402587, 0.708801, -0.579245), 
+    cameraTarget=(-250.878, -10.0116, 819.955), viewOffsetX=476.497, 
+    viewOffsetY=108.291)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1360.02, 
+    farPlane=1823.86, width=14.148, height=6.51431, viewOffsetX=368.542, 
+    viewOffsetY=134.847)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1360.49, 
+    farPlane=1823.4, width=14.1528, height=6.51653, viewOffsetX=367.874, 
+    viewOffsetY=136.152)
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'CAD Model of Bridge Assembly-2-1', ))
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'CAD Model of Bridge Assembly-1-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1483.95, 
+    farPlane=1907.04, width=15.4372, height=7.10789, cameraPosition=(-1638.17, 
+    -606.848, 653.926), cameraUpVector=(-0.0392512, 0.868657, -0.493857), 
+    cameraTarget=(-796.093, -488.518, 115.99), viewOffsetX=401.258, 
+    viewOffsetY=148.508)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1473.44, 
+    farPlane=1917.54, width=82.9417, height=38.1896, viewOffsetX=503.849, 
+    viewOffsetY=142.129)
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-1-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#7 ]', ), )
+region1=a.Surface(side1Faces=side1Faces1, name='m_Surf-11')
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-2-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#7 ]', ), )
+region2=a.Surface(side1Faces=side1Faces1, name='s_Surf-11')
+mdb.models['Model-1'].Tie(name='Constraint-6', master=region1, slave=region2, 
+    positionToleranceMethod=COMPUTED, adjust=ON, tieRotations=ON, thickness=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'CAD Model of Bridge Assembly-1-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1517.01, 
+    farPlane=2012.47, width=85.3942, height=39.3189, cameraPosition=(-1385.14, 
+    61.0726, 1318.7), cameraUpVector=(-0.0995876, 0.644144, -0.758394), 
+    cameraTarget=(-809.334, -235.734, 548.75), viewOffsetX=518.747, 
+    viewOffsetY=146.331)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1451.23, 
+    farPlane=2078.25, width=509.218, height=234.464, viewOffsetX=495.313, 
+    viewOffsetY=160.892)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1563.83, 
+    farPlane=2130.74, width=548.727, height=252.656, cameraPosition=(-599.332, 
+    929.755, 1597.93), cameraUpVector=(-0.369302, 0.340608, -0.86464), 
+    cameraTarget=(-506.989, 219.782, 890.907), viewOffsetX=533.744, 
+    viewOffsetY=173.376)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1556.48, 
+    farPlane=2138.09, width=546.147, height=251.468, cameraPosition=(-746.012, 
+    1095.94, 1411.9), cameraUpVector=(0.0306477, 0.430095, -0.902263), 
+    cameraTarget=(-653.669, 385.966, 704.872), viewOffsetX=531.234, 
+    viewOffsetY=172.561)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1446.54, 
+    farPlane=2084.85, width=507.572, height=233.706, cameraPosition=(-1212.13, 
+    -1022.57, 1129.61), cameraUpVector=(0.283364, 0.879223, 0.382978), 
+    cameraTarget=(-859.487, -434.12, 393.508), viewOffsetX=493.712, 
+    viewOffsetY=160.373)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1455.73, 
+    farPlane=1971.5, width=510.797, height=235.191, cameraPosition=(-1297.44, 
+    1279.87, -129.272), cameraUpVector=(0.944162, 0.325081, -0.0536642), 
+    cameraTarget=(-690.482, 510.859, -358.847), viewOffsetX=496.849, 
+    viewOffsetY=161.392)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1455.6, 
+    farPlane=1971.63, width=510.752, height=235.17, cameraPosition=(-1364.36, 
+    1216.73, -94.6938), cameraUpVector=(0.916319, 0.346838, -0.200156), 
+    cameraTarget=(-757.403, 447.718, -324.269), viewOffsetX=496.805, 
+    viewOffsetY=161.378)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1411.88, 
+    farPlane=1974.31, width=495.41, height=228.106, cameraPosition=(-1750.76, 
+    602.356, 16.6901), cameraUpVector=(0.701535, 0.707459, -0.0857344), 
+    cameraTarget=(-888.608, 184.279, -290.547), viewOffsetX=481.881, 
+    viewOffsetY=156.53)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=OFF, 
+    constraints=OFF, connectors=OFF, engineeringFeatures=OFF)
+del mdb.jobs['Job-1']
+mdb.Job(name='Job-1', model='Model-1', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+#: The job input file "Job-1.inp" has been submitted for analysis.
+#: Job Job-1: Analysis Input File Processor completed successfully.
+#: Job Job-1: Abaqus/Standard completed successfully.
+#: Job Job-1 completed successfully. 
+o3 = session.openOdb(name='C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-1.odb')
+#: Model: C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     17
+#: Number of Meshes:             17
+#: Number of Element Sets:       23
+#: Number of Node Sets:          23
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=669.895, 
+    farPlane=1326.19, width=491.797, height=211.311, viewOffsetX=-3.91023, 
+    viewOffsetY=0.906028)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=689.3, 
+    farPlane=1306.79, width=578.558, height=229.196, viewOffsetX=-3.46691, 
+    viewOffsetY=0.988551)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['Model-1'].steps['Freq'].setValues(numEigen=20)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+mdb.Job(name='Job-2', model='Model-1', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+mdb.jobs['Job-2'].submit(consistencyChecking=OFF)
+#: The job input file "Job-2.inp" has been submitted for analysis.
+#: Job Job-2: Analysis Input File Processor completed successfully.
+#: Job Job-2: Abaqus/Standard completed successfully.
+#: Job Job-2 completed successfully. 
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-1.odb'])
+o3 = session.openOdb(name='C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-2.odb')
+#: Model: C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-2.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     17
+#: Number of Meshes:             17
+#: Number of Element Sets:       23
+#: Number of Node Sets:          23
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=11)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=13)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=15)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=16)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=15)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=16)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=780.623, 
+    farPlane=1226.93, width=29.5627, height=11.7112, viewOffsetX=-2.01913, 
+    viewOffsetY=2.12196)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=797.282, 
+    farPlane=1248.51, width=30.1935, height=11.9612, cameraPosition=(580.908, 
+    -548.181, 616.232), cameraUpVector=(-0.10806, 0.940548, 0.322014), 
+    cameraTarget=(-89.5432, -70.4922, 37.6027), viewOffsetX=-2.06222, 
+    viewOffsetY=2.16724)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=772.207, 
+    farPlane=1273.58, width=205.594, height=81.4459, viewOffsetX=-2.98005, 
+    viewOffsetY=-11.5693)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=775.717, 
+    farPlane=1297.76, width=206.528, height=81.8161, cameraPosition=(-848.911, 
+    -301.074, 687.892), cameraUpVector=(-0.248377, 0.83858, -0.484863), 
+    cameraTarget=(-123.541, -65.8459, 31.3794), viewOffsetX=-2.9936, 
+    viewOffsetY=-11.6219)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=827.89, 
+    farPlane=1246.21, width=220.419, height=87.3189, cameraPosition=(-1048.86, 
+    258.624, -222.8), cameraUpVector=(0.652878, 0.726906, -0.212973), 
+    cameraTarget=(-118.297, -48.9736, 5.1064), viewOffsetX=-3.19494, 
+    viewOffsetY=-12.4036)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=790.291, 
+    farPlane=1283.81, width=494.387, height=195.851, viewOffsetX=-21.1128, 
+    viewOffsetY=-11.838)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=724.417, 
+    farPlane=1288.37, width=453.178, height=179.526, cameraPosition=(-61.9035, 
+    -183.53, 1023.34), cameraUpVector=(-0.0322341, 0.974024, -0.224138), 
+    cameraTarget=(-65.268, -69.3371, 23.6166), viewOffsetX=-19.353, 
+    viewOffsetY=-10.8513)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=685.969, 
+    farPlane=1283.86, width=429.126, height=169.998, cameraPosition=(246.512, 
+    488.108, 777.225), cameraUpVector=(-0.403904, 0.594334, -0.695434), 
+    cameraTarget=(-72.3196, -70.0516, 3.07829), viewOffsetX=-18.3259, 
+    viewOffsetY=-10.2754)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+mdb.save()
+#: The model database has been saved to "C:\Users\SJR4\Desktop\ABAQUS\BridgeA2\BridgeA2.cae".
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1439.54, 
+    farPlane=1946.66, width=336.451, height=142.83, viewOffsetX=491.214, 
+    viewOffsetY=132.716)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=ON, 
+    constraints=ON, connectors=ON, engineeringFeatures=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1470.85, 
+    farPlane=1915.35, width=179.45, height=76.1799, viewOffsetX=557.089, 
+    viewOffsetY=118.538)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1476.02, 
+    farPlane=1910.18, width=180.081, height=76.4478, viewOffsetX=621.264, 
+    viewOffsetY=121.144)
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'CAD Model of Bridge Assembly-1-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1498.53, 
+    farPlane=1887.67, width=57.4696, height=24.3969, viewOffsetX=672.048, 
+    viewOffsetY=127.823)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1574.8, 
+    farPlane=1871.2, width=60.3946, height=25.6386, cameraPosition=(923.293, 
+    1206.33, 1163.67), cameraUpVector=(-0.944682, 0.280821, -0.169455), 
+    cameraTarget=(343.742, 390.017, 1062.49), viewOffsetX=706.253, 
+    viewOffsetY=134.328)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1502.68, 
+    farPlane=1943.3, width=557.661, height=236.737, viewOffsetX=731.344, 
+    viewOffsetY=141.471)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1515.57, 
+    farPlane=2068.34, width=562.445, height=238.768, cameraPosition=(1284.87, 
+    183.398, 1495.54), cameraUpVector=(-0.343421, 0.859949, -0.377558), 
+    cameraTarget=(340.01, 55.0214, 1174.24), viewOffsetX=737.618, 
+    viewOffsetY=142.685)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1562.68, 
+    farPlane=2021.23, width=267.489, height=113.554, viewOffsetX=745.826, 
+    viewOffsetY=174.819)
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'CAD Model of Bridge Assembly-2-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1530.84, 
+    farPlane=2053.82, width=552.269, height=234.449, viewOffsetX=589.959, 
+    viewOffsetY=247.852)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1518.08, 
+    farPlane=2066.57, width=547.668, height=232.495, viewOffsetX=806.996, 
+    viewOffsetY=230.25)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1591.96, 
+    farPlane=1992.69, width=137.119, height=58.2096, viewOffsetX=1003.68, 
+    viewOffsetY=273.594)
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-2-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#18 ]', ), )
+region1=a.Surface(side1Faces=side1Faces1, name='m_Surf-13')
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-11-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#3 ]', ), )
+s2 = a.instances['CAD Model of Bridge Assembly-8-1'].faces
+side1Faces2 = s2.getSequenceFromMask(mask=('[#c0 ]', ), )
+s3 = a.instances['CAD Model of Bridge Assembly-14-1'].faces
+side1Faces3 = s3.getSequenceFromMask(mask=('[#c0 ]', ), )
+s4 = a.instances['CAD Model of Bridge Assembly-7-1'].faces
+side1Faces4 = s4.getSequenceFromMask(mask=('[#3 ]', ), )
+s5 = a.instances['CAD Model of Bridge Assembly-13-1'].faces
+side1Faces5 = s5.getSequenceFromMask(mask=('[#3 ]', ), )
+s6 = a.instances['CAD Model of Bridge Assembly-9-1'].faces
+side1Faces6 = s6.getSequenceFromMask(mask=('[#3 ]', ), )
+s7 = a.instances['CAD Model of Bridge Assembly-12-1'].faces
+side1Faces7 = s7.getSequenceFromMask(mask=('[#c0 ]', ), )
+s8 = a.instances['CAD Model of Bridge Assembly-10-1'].faces
+side1Faces8 = s8.getSequenceFromMask(mask=('[#c0 ]', ), )
+s9 = a.instances['CAD Model of Bridge Assembly-6-1'].faces
+side1Faces9 = s9.getSequenceFromMask(mask=('[#3 ]', ), )
+region2=a.Surface(side1Faces=side1Faces1+side1Faces2+side1Faces3+side1Faces4+\
+    side1Faces5+side1Faces6+side1Faces7+side1Faces8+side1Faces9, 
+    name='s_Surf-13')
+mdb.models['Model-1'].Tie(name='Constraint-7', master=region1, slave=region2, 
+    positionToleranceMethod=COMPUTED, adjust=ON, tieRotations=ON, thickness=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1588.52, 
+    farPlane=1996.13, width=136.823, height=58.0838, viewOffsetX=936.22, 
+    viewOffsetY=238.901)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1519.19, 
+    farPlane=2065.46, width=630.816, height=267.793, viewOffsetX=898.652, 
+    viewOffsetY=241.898)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1503.76, 
+    farPlane=2080.89, width=624.41, height=265.074, viewOffsetX=847.773, 
+    viewOffsetY=209.708)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1368.53, 
+    farPlane=2032.9, width=568.258, height=241.236, cameraPosition=(-1596.18, 
+    509.037, 1205.24), cameraUpVector=(0.679519, 0.71595, -0.160218), 
+    cameraTarget=(-1223.84, 415.952, 275.092), viewOffsetX=771.534, 
+    viewOffsetY=190.849)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1458.38, 
+    farPlane=1943.04, width=86.137, height=36.5668, viewOffsetX=907.507, 
+    viewOffsetY=222)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1493.82, 
+    farPlane=1971.77, width=88.2302, height=37.4554, cameraPosition=(-286.093, 
+    -40.1565, 2047.68), cameraUpVector=(0.135061, 0.903199, -0.407419), 
+    cameraTarget=(-726.081, -11.0077, 1143.23), viewOffsetX=929.56, 
+    viewOffsetY=227.395)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1462.16, 
+    farPlane=2003.42, width=316.93, height=134.543, viewOffsetX=923.292, 
+    viewOffsetY=240.914)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1454.52, 
+    farPlane=2011.07, width=315.273, height=133.839, viewOffsetX=850.427, 
+    viewOffsetY=231.349)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1454.5, 
+    farPlane=2011.08, width=315.27, height=133.838, viewOffsetX=815.92, 
+    viewOffsetY=226.555)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1490.22, 
+    farPlane=1975.36, width=125.74, height=53.3791, viewOffsetX=793.327, 
+    viewOffsetY=220.774)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1669.21, 
+    farPlane=1991.27, width=140.842, height=59.7902, cameraPosition=(-1916, 
+    407.839, -778.666), cameraUpVector=(0.511735, 0.789836, 0.338064), 
+    cameraTarget=(-929.526, 218.208, -836.773), viewOffsetX=888.61, 
+    viewOffsetY=247.29)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1666.57, 
+    farPlane=1993.9, width=140.619, height=59.6956, cameraPosition=(-1982.16, 
+    57.165, -757.368), cameraUpVector=(0.506477, 0.862159, 0.0127835), 
+    cameraTarget=(-995.682, -132.466, -815.475), viewOffsetX=887.205, 
+    viewOffsetY=246.899)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1620.84, 
+    farPlane=2039.65, width=476.346, height=202.218, viewOffsetX=870.6, 
+    viewOffsetY=246.833)
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'CAD Model of Bridge Assembly-15-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1692.43, 
+    farPlane=1971.55, width=10.4974, height=4.45636, viewOffsetX=954.087, 
+    viewOffsetY=264.765)
+session.viewports['Viewport: 1'].view.setValues(viewOffsetX=946.291, 
+    viewOffsetY=264.807)
+session.viewports['Viewport: 1'].view.setValues(viewOffsetX=936.325, 
+    viewOffsetY=264.594)
+session.viewports['Viewport: 1'].view.setValues(viewOffsetX=927.625, 
+    viewOffsetY=264.317)
+session.viewports['Viewport: 1'].view.setValues(viewOffsetX=918.34, 
+    viewOffsetY=264.572)
+session.viewports['Viewport: 1'].view.setValues(viewOffsetX=909.342, 
+    viewOffsetY=264.604)
+session.viewports['Viewport: 1'].view.setValues(viewOffsetX=904.641, 
+    viewOffsetY=263.328)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1688.01, 
+    farPlane=1975.96, width=42.6217, height=18.0937, viewOffsetX=906.726, 
+    viewOffsetY=256.956)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1686.91, 
+    farPlane=1977.06, width=42.5941, height=18.082, viewOffsetX=913.777, 
+    viewOffsetY=267.19)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1686.92, 
+    farPlane=1977.05, width=42.5943, height=18.0821, viewOffsetX=903.813, 
+    viewOffsetY=268.098)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1655.29, 
+    farPlane=2008.68, width=266.074, height=112.953, viewOffsetX=795.178, 
+    viewOffsetY=280.454)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1648.58, 
+    farPlane=2015.39, width=264.995, height=112.495, viewOffsetX=858.806, 
+    viewOffsetY=273.947)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1689.44, 
+    farPlane=1974.53, width=23.7222, height=10.0705, viewOffsetX=903.32, 
+    viewOffsetY=261.025)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1690.16, 
+    farPlane=1973.82, width=23.7323, height=10.0748, viewOffsetX=901.13, 
+    viewOffsetY=264.262)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1670.59, 
+    farPlane=1993.39, width=161.776, height=68.6769, viewOffsetX=859.765, 
+    viewOffsetY=270.621)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1666.54, 
+    farPlane=1997.43, width=161.384, height=68.5107, viewOffsetX=807.158, 
+    viewOffsetY=263.262)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1666.54, 
+    farPlane=1997.43, width=161.384, height=68.5107, viewOffsetX=773.802, 
+    viewOffsetY=263.262)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1556.92, 
+    farPlane=2107.05, width=930.016, height=394.809, viewOffsetX=723.016, 
+    viewOffsetY=367.507)
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-15-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#18 ]', ), )
+region1=a.Surface(side1Faces=side1Faces1, name='m_Surf-15')
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['CAD Model of Bridge Assembly-13-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#c ]', ), )
+s2 = a.instances['CAD Model of Bridge Assembly-7-1'].faces
+side1Faces2 = s2.getSequenceFromMask(mask=('[#c ]', ), )
+s3 = a.instances['CAD Model of Bridge Assembly-14-1'].faces
+side1Faces3 = s3.getSequenceFromMask(mask=('[#30 ]', ), )
+s4 = a.instances['CAD Model of Bridge Assembly-8-1'].faces
+side1Faces4 = s4.getSequenceFromMask(mask=('[#30 ]', ), )
+s5 = a.instances['CAD Model of Bridge Assembly-11-1'].faces
+side1Faces5 = s5.getSequenceFromMask(mask=('[#c ]', ), )
+s6 = a.instances['CAD Model of Bridge Assembly-9-1'].faces
+side1Faces6 = s6.getSequenceFromMask(mask=('[#c ]', ), )
+s7 = a.instances['CAD Model of Bridge Assembly-12-1'].faces
+side1Faces7 = s7.getSequenceFromMask(mask=('[#30 ]', ), )
+s8 = a.instances['CAD Model of Bridge Assembly-10-1'].faces
+side1Faces8 = s8.getSequenceFromMask(mask=('[#30 ]', ), )
+s9 = a.instances['CAD Model of Bridge Assembly-6-1'].faces
+side1Faces9 = s9.getSequenceFromMask(mask=('[#c ]', ), )
+region2=a.Surface(side1Faces=side1Faces1+side1Faces2+side1Faces3+side1Faces4+\
+    side1Faces5+side1Faces6+side1Faces7+side1Faces8+side1Faces9, 
+    name='s_Surf-15')
+mdb.models['Model-1'].Tie(name='Constraint-8', master=region1, slave=region2, 
+    positionToleranceMethod=COMPUTED, adjust=ON, tieRotations=ON, thickness=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'CAD Model of Bridge Assembly-15-1', ))
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'CAD Model of Bridge Assembly-1-1', 'CAD Model of Bridge Assembly-2-1', ))
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=OFF, 
+    constraints=OFF, connectors=OFF, engineeringFeatures=OFF)
+mdb.Job(name='Job-3', model='Model-1', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+mdb.jobs['Job-3'].submit(consistencyChecking=OFF)
+#: The job input file "Job-3.inp" has been submitted for analysis.
+#: Job Job-3: Analysis Input File Processor completed successfully.
+#: Job Job-3: Abaqus/Standard completed successfully.
+#: Job Job-3 completed successfully. 
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-2.odb'])
+o3 = session.openOdb(name='C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-3.odb')
+#: Model: C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-3.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     17
+#: Number of Meshes:             17
+#: Number of Element Sets:       23
+#: Number of Node Sets:          24
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=689.268, 
+    farPlane=1316.92, width=645.691, height=255.79, viewOffsetX=-2.57492e-05, 
+    viewOffsetY=-5.72205e-06)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=11)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-1']
+p.queryAttributes()
+#: 
+#: Part: "CAD Model of Bridge Assembly-1",  Modeling space: 3D,  Type: Deformable
+mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-1'].features['STEP Geometry-1'].info(
+    )
+#: 
+#: Feature name: STEP Geometry-1
+#:    Description: STEP Geometry
+#:    Status: 
+#:    Parent feature names: None
+#:    Child feature names: None
+#:    Parameters: None
+#: 
+#: Point 1: -149.714597, -44.020992, 214.561487  Point 2: 25.558139, -51.910651, -127.013134
+#:    Distance: 384.  Components: 175.272736, -7.889659, -341.57462
+session.viewports['Viewport: 1'].view.setValues(nearPlane=688.892, 
+    farPlane=1182.9, width=462.015, height=196.134, viewOffsetX=127.929, 
+    viewOffsetY=62.1821)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+mdb.models['Model-1'].materials['Concrete'].density.setValues(table=((
+    2.24571909e-05, ), ))
+mdb.models['Model-1'].materials['Steel'].density.setValues(table=((
+    0.000739215869, ), ))
+mdb.models['Model-1'].materials['Concrete'].elastic.setValues(table=((
+    5221356.0, 0.15), ))
+mdb.models['Model-1'].materials['Steel'].elastic.setValues(table=((29007536.0, 
+    0.29), ))
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.Job(name='Job-4', model='Model-1', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+mdb.jobs['Job-4'].submit(consistencyChecking=OFF)
+#: The job input file "Job-4.inp" has been submitted for analysis.
+#: Job Job-4: Analysis Input File Processor completed successfully.
+#: Job Job-4: Abaqus/Standard completed successfully.
+#: Job Job-4 completed successfully. 
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-3.odb'])
+o3 = session.openOdb(name='C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-4.odb')
+#: Model: C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-4.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     17
+#: Number of Meshes:             17
+#: Number of Element Sets:       23
+#: Number of Node Sets:          24
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=15)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=16)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=11)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=13)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=15)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=16)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+p1 = mdb.models['Model-1'].parts['CAD Model of Bridge Assembly-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+mdb.models['Model-1'].materials['Concrete'].density.setValues(table=((
+    0.000224571909, ), ))
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.Job(name='Job-5', model='Model-1', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+mdb.jobs['Job-5'].submit(consistencyChecking=OFF)
+#: The job input file "Job-5.inp" has been submitted for analysis.
+#: Job Job-5: Analysis Input File Processor completed successfully.
+#: Job Job-5: Abaqus/Standard completed successfully.
+#: Job Job-5 completed successfully. 
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-4.odb'])
+o3 = session.openOdb(name='C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-5.odb')
+#: Model: C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-5.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     17
+#: Number of Meshes:             17
+#: Number of Element Sets:       23
+#: Number of Node Sets:          24
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+mdb.save()
+#: The model database has been saved to "C:\Users\SJR4\Desktop\ABAQUS\BridgeA2\BridgeA2.cae".
+mdb.save()
+#: The model database has been saved to "C:\Users\SJR4\Desktop\ABAQUS\BridgeA2\BridgeA2.cae".
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=7)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=20)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=16)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=13)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=18)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=17)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=15)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=13)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=10)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=9)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=8)
+mdb.save()
+#: The model database has been saved to "C:\Users\SJR4\Desktop\ABAQUS\BridgeA2\BridgeA2.cae".
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['Model-1'].steps['Freq'].setValues(numEigen=50)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+mdb.Job(name='Job-6', model='Model-1', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+mdb.jobs['Job-6'].submit(consistencyChecking=OFF)
+#: The job input file "Job-6.inp" has been submitted for analysis.
+#: Job Job-6: Analysis Input File Processor completed successfully.
+#: Job Job-6: Abaqus/Standard completed successfully.
+#: Job Job-6 completed successfully. 
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-5.odb'])
+o3 = session.openOdb(name='C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-6.odb')
+#: Model: C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-6.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     17
+#: Number of Meshes:             17
+#: Number of Element Sets:       23
+#: Number of Node Sets:          24
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=50)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=49)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=47)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=45)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=43)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=45)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=42)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=40)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=41)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=45)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=46)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=48)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=46)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=47)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=721.13, 
+    farPlane=1289.07, width=585.528, height=251.557, viewOffsetX=1.55056, 
+    viewOffsetY=2.791)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=50)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=49)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=48)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=43)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=41)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=40)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=39)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=37)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=35)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=33)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=25)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=27)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=30)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=23)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=21)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=14)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=12)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=19)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=33)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=48)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=49)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=50)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['Model-1'].steps['Freq'].setValues(numEigen=20)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=1578.02, 
+    farPlane=2082.46, width=1006.89, height=432.587, viewOffsetX=735.326, 
+    viewOffsetY=377.288)
+mdb.models['Model-1'].steps['Freq'].setValues(numEigen=100)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+mdb.Job(name='Job-7', model='Model-1', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+mdb.jobs['Job-7'].submit(consistencyChecking=OFF)
+#: The job input file "Job-7.inp" has been submitted for analysis.
+#: Job Job-7: Analysis Input File Processor completed successfully.
+#: Job Job-7: Abaqus/Standard completed successfully.
+#: Job Job-7 completed successfully. 
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-6.odb'])
+o3 = session.openOdb(name='C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-7.odb')
+#: Model: C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-7.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     17
+#: Number of Meshes:             17
+#: Number of Element Sets:       23
+#: Number of Node Sets:          24
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=100)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=98)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=99)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=100)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['Model-1'].steps['Freq'].setValues(maxEigen=201.0, minEigen=199.0, 
+    numEigen=ALL)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+del mdb.jobs['Job-7']
+mdb.Job(name='Job-7', model='Model-1', description='', type=ANALYSIS, 
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90, 
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True, 
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF, 
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='', 
+    scratch='', resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, 
+    numGPUs=0)
+mdb.jobs['Job-7'].submit(consistencyChecking=OFF)
+#: The job input file "Job-7.inp" has been submitted for analysis.
+#: Job Job-7: Analysis Input File Processor completed successfully.
+#: Error in job Job-7: THE LANCZOS SOLVER HAS FAILED TO FIND ALL THE EIGENVALUES WITHIN THE SPECIFIED RANGE
+#: Job Job-7: Abaqus/Standard aborted due to errors.
+#: Error in job Job-7: Abaqus/Standard Analysis exited with an error - Please see the  message file for possible error messages if the file exists.
+#: Job Job-7 aborted due to errors.
+del mdb.jobs['Job-7']
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['Model-1'].steps['Freq'].setValues(maxEigen=None, minEigen=None, 
+    numEigen=10)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+o3 = session.openOdb(name='C:/Users/SJR4/Desktop/ABAQUS/BridgeA2/Job-6.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=48)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=49)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=47)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=44)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=40)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=38)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=37)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=35)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=50)
+mdb.save()
+#: The model database has been saved to "C:\Users\SJR4\Desktop\ABAQUS\BridgeA2\BridgeA2.cae".
